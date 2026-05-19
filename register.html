@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — S26 Summer Camp</title>
+  <meta name="description" content="Register for Studio Twenty Six Summer Camp with a simple QR-friendly form for full weeks, partial weeks, drop-ins, and payment preference.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="index.html" class="nav-logo">S26 Summer Camp</a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="program.html">Program</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="register.html" style="color:var(--red);">Register</a></li>
+      <li><a href="register.html" class="btn btn-primary" style="padding:8px 20px;">Save a Spot</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Registration</span>
+    <h1>Simple camp signup for full weeks, partial weeks, and drop-ins.</h1>
+    <p>This page is meant to work cleanly from a QR code. Fill out one short form, choose the week or days you want, and tell us whether you want the pay-ahead discount or pay-as-you-go.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container form-layout">
+    <div class="form-shell">
+      <h2 style="margin-bottom:18px;">Camp Registration</h2>
+      <p style="color:var(--ink-soft);margin-bottom:20px;">Fast version: family info, week choice, payment preference, notes.</p>
+      <form action="https://formsubmit.co/hello@theartway.studio" method="POST">
+        <input type="hidden" name="_subject" value="New summer camp registration lead - Studio Twenty Six">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-grid">
+          <div>
+            <label for="parent-name">Parent or guardian</label>
+            <input id="parent-name" type="text" name="parent_name" placeholder="Full name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" name="phone" placeholder="Best number">
+          </div>
+          <div>
+            <label for="camper-name">Camper name</label>
+            <input id="camper-name" type="text" name="camper_name" placeholder="Child or teen name" required>
+          </div>
+          <div>
+            <label for="camper-age">Camper age</label>
+            <input id="camper-age" type="text" name="camper_age" placeholder="Age" required>
+          </div>
+          <div>
+            <label for="enrollment-type">Enrollment type</label>
+            <select id="enrollment-type" name="enrollment_type" required>
+              <option value="">Choose one</option>
+              <option>Full week</option>
+              <option>Multiple full weeks</option>
+              <option>Partial week</option>
+              <option>Single-day drop-in</option>
+              <option>Need help deciding</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Preferred weeks</legend>
+          <div class="choice-list">
+            <label class="choice"><input type="checkbox" name="weeks[]" value="Week 1 - Color Lab"><div><strong>Week 1 - Color Lab</strong><span>Matisse, shape, color, collage, and wearable art.</span></div></label>
+            <label class="choice"><input type="checkbox" name="weeks[]" value="Week 2 - Nature Lab"><div><strong>Week 2 - Nature Lab</strong><span>O'Keeffe, flowers, texture, clay, and mobiles.</span></div></label>
+            <label class="choice"><input type="checkbox" name="weeks[]" value="Week 3 - Street Art"><div><strong>Week 3 - Street Art</strong><span>Basquiat, symbols, lettering, and giant walls.</span></div></label>
+            <label class="choice"><input type="checkbox" name="weeks[]" value="Week 4 - Invention Lab"><div><strong>Week 4 - Invention Lab</strong><span>Dali, dream worlds, creatures, and surreal objects.</span></div></label>
+            <label class="choice"><input type="checkbox" name="weeks[]" value="Week 5 - Big Art Studio"><div><strong>Week 5 - Big Art Studio</strong><span>Picasso, sculpture, giant canvas, and exhibition design.</span></div></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Schedule request</legend>
+          <div class="choice-list">
+            <label class="choice"><input type="radio" name="schedule_request" value="Standard full week"><div><strong>Standard full week</strong><span>Monday-Friday, 9 AM-2 PM.</span></div></label>
+            <label class="choice"><input type="radio" name="schedule_request" value="Specific partial week"><div><strong>Specific partial week</strong><span>I only need a few selected days.</span></div></label>
+            <label class="choice"><input type="radio" name="schedule_request" value="Single drop-in"><div><strong>Single drop-in</strong><span>I only need one day if space is available.</span></div></label>
+            <label class="choice"><input type="radio" name="schedule_request" value="Need alternate arrangement"><div><strong>Need alternate arrangement</strong><span>I need help coordinating the schedule.</span></div></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment preference</legend>
+          <div class="choice-list">
+            <label class="choice"><input type="radio" name="payment_preference" value="Pay in full discount"><div><strong>Pay in full</strong><span>I want the advance-pay discount if available.</span></div></label>
+            <label class="choice"><input type="radio" name="payment_preference" value="Pay weekly"><div><strong>Pay weekly</strong><span>I want to pay as the weeks happen.</span></div></label>
+            <label class="choice"><input type="radio" name="payment_preference" value="Pay per drop-in day"><div><strong>Pay per drop-in day</strong><span>I only need selected days and want flexible payment.</span></div></label>
+            <label class="choice"><input type="radio" name="payment_preference" value="Need help deciding"><div><strong>Need help deciding</strong><span>I want to talk through the best option first.</span></div></label>
+          </div>
+        </fieldset>
+
+        <div class="form-grid">
+          <div class="full">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Tell us the exact days you want, whether you need a drop-in, any sibling signups, accessibility needs, or a sliding scale request. If you scanned a flyer QR code, you can keep this short."></textarea>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <button type="submit" class="btn btn-primary">Submit Registration</button>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <div class="sidebar">
+        <h3>QR-first note</h3>
+        <p>This page is the cleanest single destination for a flyer or poster QR code. It is built to answer the minimum needed and move families straight into signup.</p>
+      </div>
+      <div class="sidebar" style="margin-top:24px;">
+        <h3>At a glance</h3>
+        <ul>
+          <li>Ages 5-17.</li>
+          <li>Monday-Friday, 9 AM-2 PM.</li>
+          <li>All core supplies included.</li>
+          <li>Friday family gallery share.</li>
+          <li>Sliding scale available.</li>
+          <li>Advance-pay discount option.</li>
+          <li>Pay-as-you-go available.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="text-align:center;">
+    <div class="footer-logo">S26 Summer Camp</div>
+    <div class="footer-tagline">Make. Circle. Repeat.</div>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+    <div class="copyright">Oakland, California • Flexible camp signup for a late season.</div>
+  </div>
+</footer>
+</body>
+</html>
