@@ -83,12 +83,12 @@ ul {
 }
 
 .container {
-  width: min(1180px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 56px));
   margin: 0 auto;
 }
 
 section {
-  padding: 84px 0;
+  padding: 100px 0;
 }
 
 nav {
@@ -191,7 +191,7 @@ nav .container {
 }
 
 .hero {
-  padding: 68px 0 90px;
+  padding: 82px 0 108px;
 }
 
 .hero-grid {
@@ -275,7 +275,7 @@ nav .container {
   align-items: end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 34px;
+  margin-bottom: 42px;
 }
 
 .section-head p {
@@ -313,7 +313,7 @@ nav .container {
 .sidebar,
 .faq-item,
 .week-card {
-  padding: 24px;
+  padding: 30px;
 }
 
 .stats {
@@ -358,17 +358,17 @@ nav .container {
 .weeks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
+  gap: 28px;
 }
 
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
 .day-card {
-  padding: 22px;
+  padding: 26px;
 }
 
 .day-card strong {
@@ -384,6 +384,53 @@ nav .container {
 
 .day-card p:last-child {
   margin-bottom: 0;
+}
+
+.week-card {
+  display: block;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.week-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(239, 83, 54, 0.35);
+  text-decoration: none;
+}
+
+.cta-card {
+  position: relative;
+  min-height: 100%;
+}
+
+.cta-card::after {
+  content: "See details";
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--red);
+  font-family: var(--font-detail);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.image-slot {
+  min-height: 220px;
+  padding: 28px;
+  border: 2px dashed rgba(30, 19, 51, 0.16);
+  border-radius: 26px 8px 26px 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 211, 78, 0.28), rgba(16, 151, 139, 0.12)),
+    var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--font-detail);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: end;
 }
 
 .week-num,
@@ -451,7 +498,7 @@ nav .container {
 }
 
 .page-hero {
-  padding: 74px 0 58px;
+  padding: 88px 0 70px;
 }
 
 .badge-row {
@@ -473,7 +520,7 @@ nav .container {
 }
 
 .form-shell {
-  padding: 28px;
+  padding: 34px;
 }
 
 .form-grid {
@@ -625,6 +672,10 @@ footer {
 }
 
 @media (max-width: 760px) {
+  section {
+    padding: 78px 0;
+  }
+
   .nav-toggle {
     display: block;
   }
