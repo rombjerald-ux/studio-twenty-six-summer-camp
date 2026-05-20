@@ -361,6 +361,31 @@ nav .container {
   gap: 22px;
 }
 
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.day-card {
+  padding: 22px;
+}
+
+.day-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--red);
+  font-family: var(--font-detail);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.day-card p:last-child {
+  margin-bottom: 0;
+}
+
 .week-num,
 .label {
   display: inline-block;
