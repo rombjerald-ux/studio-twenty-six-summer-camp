@@ -1,14 +1,14 @@
 :root {
-  --bg: #fff4d9;
-  --bg-soft: #fff9ef;
+  --bg: #fff1cf;
+  --bg-soft: #fff8e7;
   --surface: #ffffff;
-  --ink: #1e1333;
-  --ink-soft: #5e5572;
-  --red: #ef5336;
-  --yellow: #ffd34e;
-  --teal: #10978b;
-  --violet: #7357ff;
-  --orange: #ff9345;
+  --ink: #251337;
+  --ink-soft: #6d5871;
+  --red: #e95b37;
+  --yellow: #f8cf52;
+  --teal: #14968c;
+  --violet: #7a5cff;
+  --orange: #ff9650;
   --line: rgba(30, 19, 51, 0.1);
   --shadow: 0 20px 48px rgba(30, 19, 51, 0.12);
   --font-display: "Bebas Neue", sans-serif;
@@ -29,9 +29,9 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(255, 211, 78, 0.45), transparent 24%),
-    radial-gradient(circle at right 20%, rgba(16, 151, 139, 0.18), transparent 22%),
-    linear-gradient(180deg, #fff8ea 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, rgba(255, 211, 78, 0.46), transparent 24%),
+    radial-gradient(circle at right 20%, rgba(20, 150, 140, 0.18), transparent 22%),
+    linear-gradient(180deg, #fff7e5 0%, var(--bg) 100%);
   color: var(--ink);
   font-family: var(--font-body);
   line-height: 1.65;
@@ -192,6 +192,9 @@ nav .container {
 
 .hero {
   padding: 82px 0 108px;
+  background:
+    radial-gradient(circle at 78% 16%, rgba(233, 91, 55, 0.14), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
 }
 
 .hero-grid {
@@ -252,6 +255,20 @@ nav .container {
 .photo img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.week-thumb {
+  overflow: hidden;
+  margin: -30px -30px 18px;
+  min-height: 170px;
+  border-radius: 26px 8px 18px 18px;
+  background: #f0e6cf;
+}
+
+.week-thumb img {
+  width: 100%;
+  height: 180px;
   object-fit: cover;
 }
 
@@ -519,6 +536,45 @@ nav .container {
   letter-spacing: 0.08em;
 }
 
+.maker-band {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0));
+}
+
+.maker-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.8fr) minmax(0, 0.95fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.maker-photo {
+  overflow: hidden;
+  min-height: 280px;
+  border-radius: 28px 8px 28px 8px;
+  box-shadow: var(--shadow);
+}
+
+.maker-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.maker-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 26px 8px 26px 8px;
+  box-shadow: var(--shadow);
+}
+
+.maker-note p:last-child {
+  margin-bottom: 0;
+}
+
 .form-shell {
   padding: 34px;
 }
@@ -668,6 +724,10 @@ footer {
 
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .maker-grid {
+    grid-template-columns: 1fr;
   }
 }
 
